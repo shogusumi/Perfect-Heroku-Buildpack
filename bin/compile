@@ -147,6 +147,7 @@ rsync -Pa $CACHE_DIR/.delta/ $BUILD_DIR/.delta/ > $BUILD_DIR/build.log || fail r
 say Ok
 
 step Installing dependencies into build environment
+mkdir -p /app/.delta
 rsync -Pa $CACHE_DIR/.delta/ /app/.delta/ > $BUILD_DIR/build.log || fail rsync
 say Ok
 
