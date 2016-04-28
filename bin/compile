@@ -50,7 +50,7 @@ step Checking stack
 if [ "$STACK" == "cedar-14" ]; then
     true
   else
-    fail Sorry, only Heroku cedar-14 stack is currently supported
+    fail $STACK Sorry, only Heroku cedar-14 stack is currently supported
   fi
 say Ok
 
