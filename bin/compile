@@ -152,6 +152,8 @@ rsync -Pa $CACHE_DIR/.delta/ /app/.delta/ > $BUILD_DIR/build.log || fail rsync
 say Ok
 
 step Making application
+say $BUILD_DIR
+touch /build/app/.release
 mkdir $BUILD_DIR/PerfectLibraries 2> $BUILD_DIR/build.log
 mkdir $BUILD_DIR/webroot 2> $BUILD_DIR/build.log
 if [ -d $BUILD_DIR/PerfectLibraries -a -d $BUILD_DIR/webroot ]; then
